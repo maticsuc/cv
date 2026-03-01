@@ -7,13 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matic Šuc</title>
   <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><text x='0' y='14' font-size='16'>💻</text></svg>" type="image/svg+xml">
-  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body>
-  <div class="container">
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <i data-lucide="sun" class="sun-icon"></i>
+    <i data-lucide="moon" class="moon-icon"></i>
+  </button>
+
+  <!-- Loading Spinner -->
+  <div class="loading-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <div class="container fade-in">
     <div class="profile">
       <div class="profile_container">
         <div class="profile_profileImg">
@@ -28,11 +38,12 @@
           <p class="description profile_description">
             I am a final-year master's student at the Faculty of Computer and Information Science, University of Ljubljana, specializing in computer vision, machine learning, and artificial intelligence. Through research projects at the faculty and professional experiences, I've gained hands-on experience in these fields and am eager to apply my skills to real-world challenges while continuing to learn and grow professionally.
           </p>
-          <!-- <a class="downloadBtn" href="./cv.pdf" download="Resume.pdf">Download Resume</a> -->
         </div>
       </div>
     </div>
-    <div class="group-1">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
       <div class="contact">
         <h3 class="title">Contact</h3>
         <div class="contact_info">
@@ -47,6 +58,58 @@
           </p>
         </div>
       </div>
+      
+      <div class="skills">
+        <h3 class="title">Skills</h3>
+        <h3 class="item_title">Programming Languages</h3>
+        <ul class="skills_list description">
+          <li>Python, Java, C++</li>
+        </ul>
+        <h3 class="item_title">Frameworks & Libraries</h3>
+        <ul class="skills_list description">
+          <li>PyTorch, Keras, TensorFlow, OpenCV, NumPy, Pandas</li>
+          <li>Flask, Django</li>
+        </ul>
+        <h3 class="item_title">Tools & Platforms</h3>
+        <ul class="skills_list description">
+          <li>Docker</li>
+          <li>AWS, Azure</li>
+          <li>Git</li>
+        </ul>
+      </div>
+      
+      <div class="interest">
+        <h3 class="title">Languages</h3>
+        <p class="description">My native language is Slovenian. I'm fluent in English and learning Italian at the moment.</p>
+      </div>
+      
+      <div class="social">
+        <h3 class="title">Socials</h3>
+        <div class="social_items">
+          <a href="https://github.com/maticsuc" target="_blank" class="social_item">
+            <i data-lucide="github"></i>
+            <span>/maticsuc</span>
+          </a>
+          <a href="https://www.linkedin.com/in/maticsuc/" target="_blank" class="social_item">
+            <i data-lucide="linkedin"></i>
+            <span>/maticsuc</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- PDF Download Card -->
+      <div class="pdf-card">
+        <h3 class="title">Download CV</h3>
+        <p class="pdf-text">Want to grab my CV as PDF?</p>
+        <button class="printBtn" onclick="printCV()">
+          <i data-lucide="printer"></i>
+          <span>Print / Save as PDF</span>
+        </button>
+      </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
       <div class="exp">
         <h3 class="title">Experience</h3>
         <div class="exp_item">
@@ -54,7 +117,7 @@
           <h4 class="item_title">Python AI Engineer</h4>
           <a href="https://tkanalytics.bio/" target="_blank"><p class="item_subtitle">TK Analytics</p></a>
           <p class="item_subtitle">Ljubljana, Slovenia</p>
-          <p class=" description">Developed and deployed open-source AI models, optimizing AI model inference on AWS and managing large datasets in customized formats to enhance analytical capabilities.</p>
+          <p class="description">Developed and deployed open-source AI models, optimizing AI model inference on AWS and managing large datasets in customized formats to enhance analytical capabilities.</p>
         </div>
         <div class="exp_item">
           <p class="item_preTitle">2022</p>
@@ -76,8 +139,16 @@
           <p class="description">Developed <i><a href="http://lkrv.fri.uni-lj.si/crypto-portal/" target="_blank">Kriptogram</a></i>, an interactive online cryptography textbook, facilitating learning and understanding of cryptographic concepts.</p>
         </div>
       </div>
-    </div>
-    <div class="group-2">
+      
+      <div class="exp">
+        <h3 class="title">Publications</h3>
+        <div class="exp_item">
+          <p class="item_preTitle">2023</p>
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0950061823033007" target="_blank"><h4 class="item_title">Automated detection and segmentation of cracks in concrete surfaces using joined segmentation and classification deep neural network</h4></a>
+          <p class="description">Published research paper as part of my Bachelor's thesis.</p>
+        </div>
+      </div>
+      
       <div class="edu">
         <h3 class="title">Education</h3>
         <div class="edu_item">
@@ -86,53 +157,42 @@
           <p class="item_subtitle">University of Ljubljana, Slovenia</p>
         </div>
       </div>
-      <div class="exp">
-        <h3 class="title">Publications</h3>
-        <div class="exp_item">
-          <p class="item_preTitle">2023</p>
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0950061823033007" target="_blank"><h4 class="item_title">Automated detection and segmentation of cracks in concrete surfaces using joined segmentation and classification deep neural network</h4></a>
-          <p class=" description">Published research paper as part of my Bachelor's thesis.</p>
-        </div>
-      </div>
-      <div class="skills">
-        <h3 class="title">Skills</h3>
-        <h3 class="item_title">Programming Languages</h3>
-        <ul class="skills_list description">
-          <li>Python, Java, C++</li>
-        </ul>
-        <h3 class="item_title">Frameworks & Libraries</h3>
-        <ul class="skills_list description">
-          <li>PyTorch, Keras, TensorFlow, OpenCV, NumPy, Pandas</li>
-          <li>Flask, Django</li>
-        </ul>
-        <h3 class="item_title">Tools & Platforms</h3>
-        <ul class="skills_list description">
-          <li>Docker</li>
-          <li>AWS, Azure</li>
-          <li>Git</li>
-        </ul>
-      </div>
-      <div class="interest">
-        <h3 class="title">Languages</h3>
-        <p class="description">My native language is Slovenian. I'm fluent in English and learning Italian at the moment.</p>
-      </div>
-      <div class="social">
-        <h3 class="title">Socials</h3>
-        <div class="social_items">
-          <a href="https://github.com/maticsuc" target="_b" class="social_item">
-            <i data-feather="github"></i>
-            <span>/maticsuc</span>
-          </a>
-          <a href="https://www.linkedin.com/in/maticsuc/" target="_blank" class="social_item">
-            <i data-feather="linkedin"></i>
-            <span>/maticsuc</span>
-          </a>
-        </div>
-      </div>
-    </div>
+    </main>
   </div>
   <script>
-    feather.replace()
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Loading animation
+    window.addEventListener('load', function() {
+      setTimeout(() => {
+        document.querySelector('.loading-overlay').style.opacity = '0';
+        setTimeout(() => {
+          document.querySelector('.loading-overlay').style.display = 'none';
+        }, 500);
+      }, 800);
+    });
+
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    
+    // Check for saved theme preference or default to 'dark'
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', currentTheme);
+    
+    themeToggle.addEventListener('click', function() {
+      const theme = html.getAttribute('data-theme');
+      const newTheme = theme === 'dark' ? 'light' : 'dark';
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Print functionality
+    function printCV() {
+      window.print();
+    }
   </script>
 </body>
 
