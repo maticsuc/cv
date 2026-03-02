@@ -18,6 +18,11 @@
     <i data-lucide="moon" class="moon-icon"></i>
   </button>
 
+  <!-- Language Toggle Button -->
+  <button id="language-toggle" class="language-toggle" aria-label="Toggle language">
+    <span class="lang-text">EN</span>
+  </button>
+
   <!-- Loading Spinner -->
   <div class="loading-overlay">
     <div class="spinner"></div>
@@ -34,8 +39,8 @@
             <span class="profile_name_firstName">Matic</span>
             <span class="profile_name_lastName">Šuc</span>
           </h1>
-          <p class="profile_title">Software Developer</p>
-          <p class="description profile_description">
+          <p class="profile_title" data-i18n="profile.title">Software Developer</p>
+          <p class="description profile_description" data-i18n="profile.description">
             I am a final-year master's student at the Faculty of Computer and Information Science, University of Ljubljana, specializing in computer vision, machine learning, and artificial intelligence. Through research projects at the faculty and professional experiences, I've gained hands-on experience in these fields and am eager to apply my skills to real-world challenges while continuing to learn and grow professionally.
           </p>
         </div>
@@ -45,10 +50,10 @@
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="contact">
-        <h3 class="title">Contact</h3>
+        <h3 class="title" data-i18n="contact.title">Contact</h3>
         <div class="contact_info">
-          <p class="description">
-            Ljubljana, Slovenia
+          <p class="description" data-i18n="contact.location">
+            Sežana, Slovenia
           </p>
           <p class="description">
             +386 41 904 260
@@ -60,17 +65,17 @@
       </div>
       
       <div class="skills">
-        <h3 class="title">Skills</h3>
-        <h3 class="item_title">Programming Languages</h3>
+        <h3 class="title" data-i18n="skills.title">Skills</h3>
+        <h3 class="item_title" data-i18n="skills.programmingLanguages">Programming Languages</h3>
         <ul class="skills_list description">
           <li>Python, Java, C++</li>
         </ul>
-        <h3 class="item_title">Frameworks & Libraries</h3>
+        <h3 class="item_title" data-i18n="skills.frameworks">Frameworks & Libraries</h3>
         <ul class="skills_list description">
           <li>PyTorch, Keras, TensorFlow, OpenCV, NumPy, Pandas</li>
           <li>Flask, Django</li>
         </ul>
-        <h3 class="item_title">Tools & Platforms</h3>
+        <h3 class="item_title" data-i18n="skills.tools">Tools & Platforms</h3>
         <ul class="skills_list description">
           <li>Docker</li>
           <li>AWS, Azure</li>
@@ -79,12 +84,12 @@
       </div>
       
       <div class="interest">
-        <h3 class="title">Languages</h3>
-        <p class="description">My native language is Slovenian. I'm fluent in English and learning Italian at the moment.</p>
+        <h3 class="title" data-i18n="languages.title">Languages</h3>
+        <p class="description" data-i18n="languages.description">My native language is Slovenian. I'm fluent in English and learning Italian at the moment.</p>
       </div>
       
       <div class="social">
-        <h3 class="title">Socials</h3>
+        <h3 class="title" data-i18n="socials.title">Socials</h3>
         <div class="social_items">
           <a href="https://github.com/maticsuc" target="_blank" class="social_item">
             <i data-lucide="github"></i>
@@ -94,16 +99,20 @@
             <i data-lucide="linkedin"></i>
             <span>/maticsuc</span>
           </a>
+          <a href="https://x.com/schutz112358" target="_blank" class="social_item">
+            <i data-lucide="twitter"></i>
+            <span>@schutz112358</span>
+          </a>
         </div>
       </div>
       
       <!-- PDF Download Card -->
       <div class="pdf-card">
-        <h3 class="title">Download CV</h3>
-        <p class="pdf-text">Want to grab my CV as PDF?</p>
+        <h3 class="title" data-i18n="pdf.title">CV Export</h3>
+        <p class="pdf-text" data-i18n="pdf.description">Want to grab my CV as PDF?</p>
         <button class="printBtn" onclick="printCV()">
           <i data-lucide="printer"></i>
-          <span>Print / Save as PDF</span>
+          <span data-i18n="pdf.button">Print PDF</span>
         </button>
       </div>
     </aside>
@@ -111,50 +120,50 @@
     <!-- Main Content -->
     <main class="main-content">
       <div class="exp">
-        <h3 class="title">Experience</h3>
+        <h3 class="title" data-i18n="experience.title">Experience</h3>
         <div class="exp_item">
           <p class="item_preTitle">2023 - 2024</p>
-          <h4 class="item_title">Python AI Engineer</h4>
+          <h4 class="item_title" data-i18n="experience.job1.title">Python AI Engineer</h4>
           <a href="https://tkanalytics.bio/" target="_blank"><p class="item_subtitle">TK Analytics</p></a>
-          <p class="item_subtitle">Ljubljana, Slovenia</p>
-          <p class="description">Developed and deployed open-source AI models, optimizing AI model inference on AWS and managing large datasets in customized formats to enhance analytical capabilities.</p>
+          <p class="item_subtitle" data-i18n="experience.job1.location">Ljubljana, Slovenia</p>
+          <p class="description" data-i18n="experience.job1.description">Developed and deployed open-source AI models, optimizing AI model inference on AWS and managing large datasets in customized formats to enhance analytical capabilities.</p>
         </div>
         <div class="exp_item">
           <p class="item_preTitle">2022</p>
-          <h4 class="item_title">Research Assistant</h4>
-          <p class="item_subtitle">Laboratory for Artificial Visual Perception Systems, Faculty of Computer and Information Science</p>
-          <p class="description">Contributed to a research paper as part of my bachelor's thesis, focusing on innovative approaches in artificial visual perception.</p>
+          <h4 class="item_title" data-i18n="experience.job2.title">Research Assistant</h4>
+          <p class="item_subtitle" data-i18n="experience.job2.subtitle">Laboratory for Artificial Visual Perception Systems, Faculty of Computer and Information Science</p>
+          <p class="description" data-i18n="experience.job2.description">Contributed to a research paper as part of my bachelor's thesis, focusing on innovative approaches in artificial visual perception.</p>
         </div>
         <div class="exp_item">
           <p class="item_preTitle">2021 - 2022</p>
-          <h4 class="item_title">Computer Vision Software Engineer</h4>
+          <h4 class="item_title" data-i18n="experience.job3.title">Computer Vision Software Engineer</h4>
           <a href="https://www.kolektorvision.com/" target="_blank"><p class="item_subtitle">Kolektor Vision</p></a>
-          <p class="item_subtitle">Ljubljana, Slovenia</p>
-          <p class="description">Developed software for product control, dimensional measurements, and object identification on production lines using traditional computer vision methods to enhance quality control and automation.</p>
+          <p class="item_subtitle" data-i18n="experience.job3.location">Ljubljana, Slovenia</p>
+          <p class="description" data-i18n="experience.job3.description">Developed software for product control, dimensional measurements, and object identification on production lines using traditional computer vision methods to enhance quality control and automation.</p>
         </div>
         <div class="exp_item">
           <p class="item_preTitle">2020</p>
-          <h4 class="item_title">Project work</h4>
-          <p class="item_subtitle">Laboratory for Cryptography and Computer Security, Faculty of Computer and Information Science</p>
-          <p class="description">Developed <i><a href="http://lkrv.fri.uni-lj.si/crypto-portal/" target="_blank">Kriptogram</a></i>, an interactive online cryptography textbook, facilitating learning and understanding of cryptographic concepts.</p>
+          <h4 class="item_title" data-i18n="experience.job4.title">Project work</h4>
+          <p class="item_subtitle" data-i18n="experience.job4.subtitle">Laboratory for Cryptography and Computer Security, Faculty of Computer and Information Science</p>
+          <p class="description" data-i18n="experience.job4.description">Developed <i><a href="http://lkrv.fri.uni-lj.si/crypto-portal/" target="_blank">Kriptogram</a></i>, an interactive online cryptography textbook, facilitating learning and understanding of cryptographic concepts.</p>
         </div>
       </div>
       
       <div class="exp">
-        <h3 class="title">Publications</h3>
+        <h3 class="title" data-i18n="publications.title">Publications</h3>
         <div class="exp_item">
           <p class="item_preTitle">2023</p>
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0950061823033007" target="_blank"><h4 class="item_title">Automated detection and segmentation of cracks in concrete surfaces using joined segmentation and classification deep neural network</h4></a>
-          <p class="description">Published research paper as part of my Bachelor's thesis.</p>
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0950061823033007" target="_blank"><h4 class="item_title" data-i18n="publications.paper1.title">Automated detection and segmentation of cracks in concrete surfaces using joined segmentation and classification deep neural network</h4></a>
+          <p class="description" data-i18n="publications.paper1.description">Published research paper as part of my Bachelor's thesis.</p>
         </div>
       </div>
       
       <div class="edu">
-        <h3 class="title">Education</h3>
+        <h3 class="title" data-i18n="education.title">Education</h3>
         <div class="edu_item">
           <p class="item_preTitle">2018-2022</p>
-          <h4 class="item_title">Bachelor of Science in Computer and Information Science</h4>
-          <p class="item_subtitle">University of Ljubljana, Slovenia</p>
+          <h4 class="item_title" data-i18n="education.degree1.title">Bachelor of Science in Computer and Information Science</h4>
+          <p class="item_subtitle" data-i18n="education.degree1.subtitle">University of Ljubljana, Slovenia</p>
         </div>
       </div>
     </main>
@@ -193,6 +202,112 @@
     function printCV() {
       window.print();
     }
+
+    // Language Toggle Functionality
+    const translations = {
+      en: {
+        'profile.title': 'Software Developer',
+        'profile.description': "I am a final-year master's student at the Faculty of Computer and Information Science, University of Ljubljana, specializing in computer vision, machine learning, and artificial intelligence. Through research projects at the faculty and professional experiences, I've gained hands-on experience in these fields and am eager to apply my skills to real-world challenges while continuing to learn and grow professionally.",
+        'contact.title': 'Contact',
+        'contact.location': 'Sežana, Slovenia',
+        'skills.title': 'Skills',
+        'skills.programmingLanguages': 'Programming Languages',
+        'skills.frameworks': 'Frameworks & Libraries',
+        'skills.tools': 'Tools & Platforms',
+        'languages.title': 'Languages',
+        'languages.description': "My native language is Slovenian. I'm fluent in English and learning Italian at the moment.",
+        'socials.title': 'Socials',
+        'pdf.title': 'Export CV',
+        'pdf.description': 'Want to grab my CV as PDF?',
+        'pdf.button': 'Print PDF',
+        'experience.title': 'Experience',
+        'experience.job1.title': 'Python AI Engineer',
+        'experience.job1.location': 'Ljubljana, Slovenia',
+        'experience.job1.description': 'Developed and deployed open-source AI models, optimizing AI model inference on AWS and managing large datasets in customized formats to enhance analytical capabilities.',
+        'experience.job2.title': 'Research Assistant',
+        'experience.job2.subtitle': 'Laboratory for Artificial Visual Perception Systems, Faculty of Computer and Information Science',
+        'experience.job2.description': "Contributed to a research paper as part of my bachelor's thesis, focusing on innovative approaches in artificial visual perception.",
+        'experience.job3.title': 'Computer Vision Software Engineer',
+        'experience.job3.location': 'Ljubljana, Slovenia',
+        'experience.job3.description': 'Developed software for product control, dimensional measurements, and object identification on production lines using traditional computer vision methods to enhance quality control and automation.',
+        'experience.job4.title': 'Project work',
+        'experience.job4.subtitle': 'Laboratory for Cryptography and Computer Security, Faculty of Computer and Information Science',
+        'experience.job4.description': 'Developed <i><a href="http://lkrv.fri.uni-lj.si/crypto-portal/" target="_blank">Kriptogram</a></i>, an interactive online cryptography textbook, facilitating learning and understanding of cryptographic concepts.',
+        'publications.title': 'Publications',
+        'publications.paper1.title': 'Automated detection and segmentation of cracks in concrete surfaces using joined segmentation and classification deep neural network',
+        'publications.paper1.description': "Published research paper as part of my Bachelor's thesis.",
+        'education.title': 'Education',
+        'education.degree1.title': 'Bachelor of Science in Computer and Information Science',
+        'education.degree1.subtitle': 'University of Ljubljana, Slovenia'
+      },
+      sl: {
+        'profile.title': 'Razvijalec programske opreme',
+        'profile.description': 'Sem študent zadnjega letnika magistrskega študija na Fakulteti za računalništvo in informatiko Univerze v Ljubljani, specializiran za računalniški vid, strojno učenje in umetno inteligenco. S pomočjo raziskovalnih projektov na fakulteti in profesionalnih izkušenj sem pridobil praktične izkušnje na teh področjih ter sem željn uporabiti svoje znanje pri reševanju izzivov v resničnem svetu, medtem ko se učim in profesionalno rastem.',
+        'contact.title': 'Kontakt',
+        'contact.location': 'Sežana, Slovenija',
+        'skills.title': 'Veščine',
+        'skills.programmingLanguages': 'Programski jeziki',
+        'skills.frameworks': 'Ogrodja in knjižnice',
+        'skills.tools': 'Orodja in platforme',
+        'languages.title': 'Jeziki',
+        'languages.description': 'Moj materni jezik je slovenščina. Tekoče govorim angleško in se trenutno učim italijanščine.',
+        'socials.title': 'Družbena omrežja',
+        'pdf.title': 'Export CV',
+        'pdf.description': 'Prenesi moj CV kot PDF?',
+        'pdf.button': 'Natisni PDF',
+        'experience.title': 'Izkušnje',
+        'experience.job1.title': 'Python AI razvijalec',
+        'experience.job1.location': 'Ljubljana, Slovenija',
+        'experience.job1.description': 'Razvijal in uvajal odprtokodne modele umetne inteligence, optimiziral inference modelov UI na AWS in upravljal velike nabore podatkov v prilagojenih formatih za izboljšanje analitičnih zmožnosti.',
+        'experience.job2.title': 'Raziskovalni asistent',
+        'experience.job2.subtitle': 'Laboratorij za sisteme umetnega vida, Fakulteta za računalništvo in informatiko',
+        'experience.job2.description': 'Prispeval k raziskovalni publikaciji kot del moje diplomske naloge, osredotočen na inovativne pristope k umetnemu vidu.',
+        'experience.job3.title': 'Razvijalec programske opreme za računalniški vid',
+        'experience.job3.location': 'Ljubljana, Slovenija',
+        'experience.job3.description': 'Razvijal programsko opremo za nadzor izdelkov, dimenzijske meritve in identificiranje objektov na proizvodnih linijah z uporabo tradicionalnih metod računalniškega vida za izboljšanje nadzora kakovosti in avtomatizacije.',
+        'experience.job4.title': 'Projektno delo',
+        'experience.job4.subtitle': 'Laboratorij za kriptografijo in računalniško varnost, Fakulteta za računalništvo in informatiko',
+        'experience.job4.description': 'Razvil <i><a href="http://lkrv.fri.uni-lj.si/crypto-portal/" target="_blank">Kriptogram</a></i>, interaktivni spletni učbenik za kriptografijo, ki olajšuje učenje in razumevanje kriptografskih konceptov.',
+        'publications.title': 'Publikacije',
+        'publications.paper1.title': 'Avtomatizirano zaznavanje in segmentacija razpok v betonskih površinah z uporabo združene segmentacijske in klasifikacijske globoke nevronske mreže',
+        'publications.paper1.description': 'Objavljena raziskovalna publikacija kot del moje diplomske naloge.',
+        'education.title': 'Izobrazba',
+        'education.degree1.title': 'Diplomirani računalnik in informatik',
+        'education.degree1.subtitle': 'Univerza v Ljubljani, Slovenija'
+      }
+    };
+
+    const languageToggle = document.getElementById('language-toggle');
+    let currentLanguage = localStorage.getItem('language') || 'en';
+
+    // Function to update text content based on language
+    function updateLanguage(lang) {
+      currentLanguage = lang;
+      localStorage.setItem('language', lang);
+      
+      // Update all elements with data-i18n attribute
+      document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          element.innerHTML = translations[lang][key];
+        }
+      });
+      
+      // Update language toggle button text
+      languageToggle.querySelector('.lang-text').textContent = lang === 'en' ? 'SL' : 'EN';
+      
+      // Update html lang attribute
+      document.documentElement.setAttribute('lang', lang);
+    }
+
+    // Initialize language on page load
+    updateLanguage(currentLanguage);
+
+    // Language toggle event listener
+    languageToggle.addEventListener('click', function() {
+      const newLanguage = currentLanguage === 'en' ? 'sl' : 'en';
+      updateLanguage(newLanguage);
+    });
   </script>
 </body>
 
