@@ -127,40 +127,40 @@ a:hover {
         display: contents !important;
     }
     
-    /* Mobile card order: profile, contact, socials, skills, experience, publications, education, languages, hardware, export cv */
+    /* Mobile card order: profile, socials, skills, experience, publications, education, languages, hardware, contact, export cv */
     .profile {
         order: 1 !important;
     }
     
-    .contact {
+    .social {
         order: 2 !important;
     }
     
-    .social {
+    .skills {
         order: 3 !important;
     }
     
-    .skills {
+    #experience {
         order: 4 !important;
     }
     
-    #experience {
+    #publications {
         order: 5 !important;
     }
     
-    #publications {
+    .edu {
         order: 6 !important;
     }
     
-    .edu {
+    .interest {
         order: 7 !important;
     }
     
-    .interest {
+    .hardware-card {
         order: 8 !important;
     }
     
-    .hardware-card {
+    .contact {
         order: 9 !important;
     }
     
