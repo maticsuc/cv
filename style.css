@@ -112,14 +112,60 @@ a:hover {
 
 @media only screen and (max-width: 768px) {
     .container {
-        width: 100%;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "profile"
-            "sidebar"
-            "main";
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
         padding: 3rem;
         gap: 3rem;
+    }
+    
+    .sidebar {
+        display: contents !important;
+    }
+    
+    .main-content {
+        display: contents !important;
+    }
+    
+    /* Mobile card order: profile, contact, socials, skills, experience, publications, education, languages, hardware, export cv */
+    .profile {
+        order: 1 !important;
+    }
+    
+    .contact {
+        order: 2 !important;
+    }
+    
+    .social {
+        order: 3 !important;
+    }
+    
+    .skills {
+        order: 4 !important;
+    }
+    
+    #experience {
+        order: 5 !important;
+    }
+    
+    #publications {
+        order: 6 !important;
+    }
+    
+    .edu {
+        order: 7 !important;
+    }
+    
+    .interest {
+        order: 8 !important;
+    }
+    
+    .hardware-card {
+        order: 9 !important;
+    }
+    
+    .pdf-card {
+        order: 10 !important;
     }
     
     .profile,
