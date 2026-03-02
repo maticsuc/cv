@@ -263,6 +263,72 @@ a:hover {
     margin-top: 0;
 }
 
+/* Hardware Card */
+.hardware-card {
+    background: var(--card-background);
+    border-radius: 1.2rem;
+    padding: 3rem;
+    box-shadow: 0 4px 6px var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.hardware-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 12px var(--card-shadow);
+}
+
+.hardware-item {
+    margin-top: 1.5rem;
+}
+
+.hardware-name {
+    font-size: 1.9rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin: 0 0 1.2rem 0;
+}
+
+.hardware-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hardware-specs li {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    padding: 0.5rem 0;
+}
+
+.hardware-specs li span:first-child {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.hardware-services {
+    display: block;
+}
+
+.hardware-services-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 2rem;
+}
+
+.hardware-services-list li {
+    font-size: 1.3rem;
+    padding: 0.3rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.hardware-services-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
 @media only screen and (max-width: 768px) {
     .pdf-card {
         padding: 2rem;
@@ -270,6 +336,14 @@ a:hover {
     
     .pdf-text {
         font-size: 1.5rem;
+    }
+    
+    .hardware-card {
+        padding: 2rem;
+    }
+    
+    .hardware-specs li {
+        font-size: 1.3rem;
     }
 }
 
