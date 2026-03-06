@@ -92,6 +92,11 @@ a:hover {
     color: var(--text-color);
     font-weight: 400;
     transition: color 0.3s ease;
+    margin: 0.3rem 0;
+}
+
+.item_subtitle-faculty {
+    margin-bottom: 0.2rem;
 }
 
 /* Layouts */
