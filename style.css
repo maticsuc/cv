@@ -552,7 +552,7 @@ hr {
     right: 2rem;
     width: 4rem;
     height: 4rem;
-    border-radius: 50%;
+    border-radius: 1.2rem;
     background-color: var(--primary-color);
     border: none;
     cursor: pointer;
@@ -614,7 +614,7 @@ hr {
     right: 2rem;
     width: 4rem;
     height: 4rem;
-    border-radius: 50%;
+    border-radius: 1.2rem;
     background-color: var(--primary-color);
     border: none;
     cursor: pointer;
