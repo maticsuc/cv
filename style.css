@@ -438,6 +438,47 @@ a:hover {
 .skills_list img {
     width: 50px; /* Adjust as needed */
     height: 50px; /* Keeps the image square */
+}
+
+/* Skills Tags */
+.skills-category {
+    margin-top: 2rem;
+}
+
+.skills-category:first-of-type {
+    margin-top: 1.5rem;
+}
+
+.skills-category-title {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: rgba(52, 156, 116, 0.15);
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    border: 1px solid var(--primary-color);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.skill-tag:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(52, 156, 116, 0.3);
 }  
 
 /* References */
