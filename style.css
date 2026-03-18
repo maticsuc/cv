@@ -132,7 +132,7 @@ a:hover {
         display: contents !important;
     }
 
-    /* Mobile card order: profile, socials, skills, experience, publications, education, languages, hardware, contact, export cv */
+    /* Mobile card order: profile, socials, skills, experience, projects, publications, education, languages, hardware, contact, export cv */
     .profile {
         order: 1 !important;
     }
@@ -149,28 +149,32 @@ a:hover {
         order: 4 !important;
     }
 
-    #publications {
+    #projects {
         order: 5 !important;
     }
 
-    .edu {
+    #publications {
         order: 6 !important;
     }
 
-    .interest {
+    .edu {
         order: 7 !important;
     }
 
-    .hardware-card {
+    .interest {
         order: 8 !important;
     }
 
-    .contact {
+    .hardware-card {
         order: 9 !important;
     }
 
-    .pdf-card {
+    .contact {
         order: 10 !important;
+    }
+
+    .pdf-card {
+        order: 11 !important;
     }
 
     .profile,
