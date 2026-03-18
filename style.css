@@ -123,56 +123,56 @@ a:hover {
         padding: 3rem;
         gap: 3rem;
     }
-    
+
     .sidebar {
         display: contents !important;
     }
-    
+
     .main-content {
         display: contents !important;
     }
-    
+
     /* Mobile card order: profile, socials, skills, experience, publications, education, languages, hardware, contact, export cv */
     .profile {
         order: 1 !important;
     }
-    
+
     .social {
         order: 2 !important;
     }
-    
+
     .skills {
         order: 3 !important;
     }
-    
+
     #experience {
         order: 4 !important;
     }
-    
+
     #publications {
         order: 5 !important;
     }
-    
+
     .edu {
         order: 6 !important;
     }
-    
+
     .interest {
         order: 7 !important;
     }
-    
+
     .hardware-card {
         order: 8 !important;
     }
-    
+
     .contact {
         order: 9 !important;
     }
-    
+
     .pdf-card {
         order: 10 !important;
     }
-    
+
     .profile,
     .contact,
     .exp,
@@ -384,15 +384,15 @@ a:hover {
     .pdf-card {
         padding: 2rem;
     }
-    
+
     .pdf-text {
         font-size: 1.5rem;
     }
-    
+
     .hardware-card {
         padding: 2rem;
     }
-    
+
     .hardware-specs li {
         font-size: 1.3rem;
     }
@@ -479,7 +479,95 @@ a:hover {
 .skill-tag:hover {
     background-color: var(--primary-color);
     box-shadow: 0 4px 8px rgba(52, 156, 116, 0.3);
-}  
+}
+
+/* Tech Stack Tags */
+.tech-stack-title {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.tech-stack-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-category {
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-category-label {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.tech-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: rgba(52, 156, 116, 0.15);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 0.4rem;
+    border: 1px solid var(--primary-color);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.tech-tag:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(52, 156, 116, 0.3);
+}
+
+.projects-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.project-icon-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.project-icon-link:hover {
+    color: var(--primary-color);
+}
+
+.project-icon-link i {
+    width: 1.8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-icon-link svg {
+    width: 1.8rem;
+    height: 1.8rem;
+}
 
 /* References */
 .ref_item {
@@ -691,7 +779,7 @@ hr {
         width: 3.5rem;
         height: 3.5rem;
     }
-    
+
     .language-toggle .lang-text {
         font-size: 1.2rem;
     }
@@ -763,7 +851,7 @@ hr {
         --card-background: #FFFFFF;
         --card-shadow: rgba(0, 0, 0, 0);
     }
-    
+
     /* Remove card effects for print */
     .profile,
     .contact,
