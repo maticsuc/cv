@@ -171,12 +171,12 @@
 
       <!-- PDF Download Card -->
       <div class="pdf-card">
-        <h3 class="title" data-i18n="pdf.title">CV Export</h3>
-        <p class="pdf-text" data-i18n="pdf.description">Want to grab my CV as PDF?</p>
-        <button class="printBtn" onclick="printCV()">
-          <i data-lucide="printer"></i>
-          <span data-i18n="pdf.button">Print PDF</span>
-        </button>
+        <h3 class="title" data-i18n="pdf.title">Download CV</h3>
+        <p class="pdf-text" data-i18n="pdf.description">Feel free to grab my CV as PDF to go.</p>
+        <a class="download_btn" href="matic-suc-cv.pdf" download="matic-suc-cv.pdf" aria-label="Download Matic Suc CV PDF">
+          <i data-lucide="download"></i>
+          <span data-i18n="pdf.button">Download CV</span>
+        </a>
       </div>
 
       <!-- Hardware Card -->
@@ -391,11 +391,6 @@
       localStorage.setItem('theme', newTheme);
     });
 
-    // Print functionality
-    function printCV() {
-      window.print();
-    }
-
     // Language Toggle Functionality
     const translations = {
       en: {
@@ -414,9 +409,9 @@
         'languages.title': 'Languages',
         'languages.description': "My native language is Slovenian. I'm fluent in English and learning Italian at the moment.",
         'socials.title': 'Socials',
-        'pdf.title': 'Export CV',
-        'pdf.description': 'Want to grab my CV as PDF?',
-        'pdf.button': 'Print PDF',
+        'pdf.title': 'Download CV',
+        'pdf.description': 'Feel free to grab my CV as PDF to go.',
+        'pdf.button': 'Download CV',
         'hardware.title': 'Hardware',
         'hardware.pi.name': 'Raspberry Pi 5',
         'hardware.pi.ram': 'RAM:',
@@ -489,9 +484,9 @@
         'languages.title': 'Jeziki',
         'languages.description': 'Moj materni jezik je slovenščina. Tekoče govorim angleško in se trenutno učim italijanščine.',
         'socials.title': 'Socialna omrežja',
-        'pdf.title': 'Export CV',
-        'pdf.description': 'Prenesi moj CV kot PDF?',
-        'pdf.button': 'Natisni PDF',
+        'pdf.title': 'Prenesi CV',
+        'pdf.description': 'Prenesi moj CV v PDF obliki.',
+        'pdf.button': 'Prenesi CV',
         'hardware.title': 'Strojna oprema',
         'hardware.pi.name': 'Raspberry Pi 5',
         'hardware.pi.ram': 'RAM:',

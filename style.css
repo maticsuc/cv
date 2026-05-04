@@ -132,7 +132,7 @@ a:hover {
         display: contents !important;
     }
 
-    /* Mobile card order: profile, socials, skills, experience, projects, publications, education, languages, hardware, contact, export cv, terminal cv */
+    /* Mobile card order: profile, socials, skills, experience, projects, publications, education, languages, hardware, contact, download cv, terminal cv */
     .profile {
         order: 1 !important;
     }
@@ -266,8 +266,8 @@ a:hover {
     text-transform: uppercase;
 }
 
-/* Print Button */
-.printBtn {
+/* Download Button */
+.download_btn {
     display: inline-flex;
     align-items: center;
     gap: 0.8rem;
@@ -280,18 +280,19 @@ a:hover {
     border: 2px solid var(--primary-color);
     border-radius: 0.5rem;
     cursor: pointer;
+    text-decoration: none;
     transition: all 0.3s ease;
     font-family: Inter, sans-serif;
 }
 
-.printBtn:hover {
+.download_btn:hover {
     background-color: transparent;
     color: var(--primary-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.printBtn svg {
+.download_btn svg {
     width: 2rem;
     height: 2rem;
 }
@@ -318,7 +319,7 @@ a:hover {
     transition: color 0.3s ease;
 }
 
-.pdf-card .printBtn {
+.pdf-card .download_btn {
     margin-top: 0;
 }
 
@@ -898,7 +899,7 @@ hr {
 @media print {
     /* Hide interactive elements */
     .theme-toggle,
-    .printBtn,
+    .download_btn,
     .loading-overlay,
     .pdf-card,
     .cli-section {
