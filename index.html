@@ -7,6 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matic Šuc</title>
   <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><text x='0' y='14' font-size='16'>💻</text></svg>" type="image/svg+xml">
+  <script>
+    (() => {
+      const savedTheme = localStorage.getItem('theme');
+      const systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme || systemTheme);
+    })();
+  </script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -379,9 +386,18 @@
     const themeToggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
 
-    // Check for saved theme preference or default to 'dark'
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    html.setAttribute('data-theme', currentTheme);
+    const systemThemePreference = window.matchMedia('(prefers-color-scheme: light)');
+    const getSystemTheme = () => systemThemePreference.matches ? 'light' : 'dark';
+    const getSavedTheme = () => localStorage.getItem('theme');
+    const applyTheme = (theme) => html.setAttribute('data-theme', theme);
+
+    applyTheme(getSavedTheme() || getSystemTheme());
+
+    systemThemePreference.addEventListener('change', function() {
+      if (!getSavedTheme()) {
+        applyTheme(getSystemTheme());
+      }
+    });
 
     themeToggle.addEventListener('click', function() {
       const theme = html.getAttribute('data-theme');
